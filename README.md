@@ -6,7 +6,7 @@ This is the Makers Academy week 4 afternoon challenge.
 ```
 
 As a user 
-so that I can acesss the websites I regurarly use faster,
+so that I can access the websites I regularly use faster,
 I need to see a list of bookmarks.
 
 This is a rough copy of the Domain model for the above:
@@ -39,3 +39,20 @@ admin=# CREATE DATABASE bookmark_manager;
 admin=# \c bookmark_manager;
 ```
 4. Run the query we have saved in the file `01_create_bookmarks_table.sql`
+
+## Setting up a test database
+
+We will need to have different databases for each environment. To set up a test database, we need to run `psql` and create a database:
+```
+$> psql
+admin=# CREATE DATABASE "bookmark_manager_test";
+```
+We now need to connect to this new database so we can create a new table:
+```
+admin=# \c bookmark_manager_test;
+```
+We use the SQL query saved in `db/migrations/01_create_bookmarks_table.sql` to create a bookmarks table:
+```
+bookmark_manager_test=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+```
+
