@@ -56,3 +56,13 @@ We use the SQL query saved in `db/migrations/01_create_bookmarks_table.sql` to c
 bookmark_manager_test=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
 ```
 
+things to add:
+
+Show a list of bookmarks 
+Add new bookmarks 
+Delete bookmarks
+Update bookmarks
+Comment on bookmarks
+Tag bookmarks into categories
+Filter bookmarks by tag
+Users manage their bookmarks

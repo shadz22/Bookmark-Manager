@@ -15,4 +15,12 @@ describe Bookmark do
       expect(bookmark).to include("http://www.yahoo.com")
     end
   end
+
+  describe '.create' do
+    it 'Adds new bookmark' do
+      Bookmark.create(url: 'http://testing.com')
+      expect(Bookmark.all).to include 'http://testing.com'
+    end
+  end
+
 end
